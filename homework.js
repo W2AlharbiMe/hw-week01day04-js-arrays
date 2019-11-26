@@ -84,13 +84,14 @@ addDashes(["test1", "test2", "test3"]);
 console.log("-".repeat(30));
 
 function wordsWithA(words) {
-  const wordsA = [];
+  const wordsA = words.filter(word => word.toLowerCase().includes("a"));
 
-  words.forEach(function(item, index) {
-    if (item.includes("a")) {
-      wordsA.push(item);
-    }
-  });
+  // old solution
+  // words.forEach(function(item, index) {
+  //   if (item.includes("a")) {
+  //     wordsA.push(item);
+  //   }
+  // });
   console.log(wordsA);
 }
 
@@ -99,13 +100,14 @@ wordsWithA(["cat", "rabbit", "dog", "frog"]);
 console.log("-".repeat(30));
 
 function wordsWithLetter(letter, words) {
-  const wordsA = [];
+  const wordsA = words.filter(word => word.includes(letter));
 
-  words.forEach(function(item, index) {
-    if (item.includes(letter)) {
-      wordsA.push(item);
-    }
-  });
+  // old solution
+  // words.forEach(function(item, index) {
+  //   if (item.includes(letter)) {
+  //     wordsA.push(item);
+  //   }
+  // });
   console.log(wordsA);
 }
 
